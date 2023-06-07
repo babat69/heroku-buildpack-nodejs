@@ -233,7 +233,7 @@ npm_node_modules() {
       else
         echo "Installing node modules (package.json)"
       fi
-      monitor "npm-install" npm install --production="$production" --unsafe-perm --userconfig "$build_dir/.npmrc" 2>&1
+      monitor "npm-install" npm ci --production="$production" --unsafe-perm --userconfig "$build_dir/.npmrc" 2>&1
     fi
   else
     echo "Skipping (no package.json)"
